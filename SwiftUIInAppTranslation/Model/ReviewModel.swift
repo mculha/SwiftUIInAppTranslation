@@ -10,19 +10,25 @@ import Foundation
 struct ReviewModel: Identifiable, Decodable {
     
     let id: UUID
-    let title: String
+    let username: String
     let review: String
+    
+    init(id: UUID = UUID(), username: String, review: String) {
+        self.id = id
+        self.username = username
+        self.review = review
+    }
     
     enum CodingKeys: CodingKey {
         case id
-        case title
+        case username
         case review
     }
     
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = UUID()
-        self.title = try container.decode(String.self, forKey: .title)
+        self.username = try container.decode(String.self, forKey: .username)
         self.review = try container.decode(String.self, forKey: .review)
     }
 }

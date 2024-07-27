@@ -1,42 +1,42 @@
 [
   {
-    "title": "Amazing Music Experience",
+    "username": "musiclover123",
     "review": "This app offers an incredible music experience with high-quality audio and a vast library of songs. The interface is sleek and user-friendly. Highly recommend for all music lovers!"
   },
   {
-    "title": "Great but Needs Offline Mode",
+    "username": "offlineSeeker",
     "review": "I love the app and its features, but it desperately needs an offline mode. Streaming is great, but sometimes I need to listen to music without using data. Hope this feature is added soon."
   },
   {
-    "title": "Perfect for Discovering New Music",
+    "username": "newMusicFan",
     "review": "This app is fantastic for discovering new music. The recommendations are spot on, and I’ve found so many new artists I love. The curated playlists are also a nice touch."
   },
   {
-    "title": "User-Friendly and Feature-Rich",
+    "username": "featureLover",
     "review": "The app is very user-friendly and packed with features. I especially love the custom playlists and the ability to share music with friends. It’s my go-to music app."
   },
   {
-    "title": "Good, But Expensive",
+    "username": "budgetListener",
     "review": "The app provides a great music experience, but the subscription cost is a bit high compared to other music apps. If it were more affordable, it would be perfect."
   },
   {
-    "title": "Needs Improvement on Stability",
+    "username": "stabilityCritic",
     "review": "The app has a great selection of music, but it crashes quite often. The developers need to work on the stability issues. When it works, it’s fantastic."
   },
   {
-    "title": "Excellent Sound Quality",
+    "username": "audiophile",
     "review": "The sound quality on this app is top-notch. Whether I’m using headphones or speakers, the audio is clear and crisp. It’s a pleasure to listen to my favorite songs."
   },
   {
-    "title": "Great for Creating Playlists",
+    "username": "playlistCreator",
     "review": "I love how easy it is to create and manage playlists on this app. The drag-and-drop feature is very intuitive, and I can organize my music just the way I like it."
   },
   {
-    "title": "Could Use Better Search Function",
+    "username": "searchCritic",
     "review": "The app is great overall, but the search function could be improved. Sometimes it’s hard to find specific songs or artists. Fixing this would make the app even better."
   },
   {
-    "title": "Ideal for Music Sharing",
+    "username": "socialListener",
     "review": "This app makes sharing music with friends so easy. The social features are fantastic, and I love being able to see what my friends are listening to. It’s a lot of fun."
   }
 ]
