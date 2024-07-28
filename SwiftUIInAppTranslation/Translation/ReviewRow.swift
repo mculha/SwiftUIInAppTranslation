@@ -9,8 +9,15 @@ import Translation
 
 struct ReviewRow: View {
     let model: ReviewModel
-    @State var translationEnabled: Bool = false
     
+    @State private var translatedReview: String
+    @State private var translationEnabled: Bool = false
+    @State private var configuration: TranslationSession.Configuration?
+    
+    init(model: ReviewModel) {
+        self.model = model
+        self.translatedReview = model.review
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -25,11 +32,11 @@ struct ReviewRow: View {
                     .scaledToFit()
                     .frame(width: 25, height: 25)
                     .onTapGesture {
-                        self.translationEnabled = true
+                        self.triggerTranslation()
                     }
             }
             
-            Text(model.review)
+            Text(translatedReview)
                 .font(.system(size: 12, weight: .regular))
                 .lineSpacing(5)
         }
@@ -45,6 +52,27 @@ struct ReviewRow: View {
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
         .translationPresentation(isPresented: $translationEnabled, text: model.review)
+        .onTapGesture {
+            self.translationEnabled = true
+        }
+        .translationTask(configuration) { session in
+            await self.translateReview(session)
+        }
+    }
+    
+    private func triggerTranslation() {
+        if configuration == nil {
+            configuration = TranslationSession.Configuration()
+            return
+        }
+        configuration?.invalidate()
+    }
+    
+    private func translateReview(_ session: TranslationSession) async {
+        do {
+            let response = try await session.translate(model.review)
+            self.translatedReview = response.targetText
+        } catch { }
     }
 }
 
