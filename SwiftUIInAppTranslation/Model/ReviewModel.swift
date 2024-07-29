@@ -12,6 +12,7 @@ struct ReviewModel: Identifiable, Decodable {
     let id: UUID
     let username: String
     let review: String
+    var translationText: String?
     
     init(id: UUID = UUID(), username: String, review: String) {
         self.id = id
@@ -30,5 +31,9 @@ struct ReviewModel: Identifiable, Decodable {
         self.id = UUID()
         self.username = try container.decode(String.self, forKey: .username)
         self.review = try container.decode(String.self, forKey: .review)
+    }
+    
+    mutating func setTranslation(_ text: String) {
+        self.translationText = text
     }
 }

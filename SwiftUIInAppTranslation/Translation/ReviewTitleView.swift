@@ -7,6 +7,9 @@
 import SwiftUI
 
 struct ReviewTitleView: View {
+    
+    var translateAction: () -> ()
+    
     var body: some View {
         HStack {
             Text("Reviews")
@@ -14,13 +17,14 @@ struct ReviewTitleView: View {
             
             Spacer()
             
-            
-            Text("Translate All")
-                .font(.system(size: 14, weight: .semibold))
+            Button(action: translateAction) {
+                Text("Translate All")
+                    .font(.system(size: 14, weight: .semibold))
+            }
         }
     }
 }
 
 #Preview {
-    ReviewTitleView()
+    ReviewTitleView {}
 }

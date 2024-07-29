@@ -9,15 +9,9 @@ import Translation
 
 struct ReviewRow: View {
     let model: ReviewModel
-    
-    @State private var translatedReview: String
+    let action: (TranslationSession, ReviewModel) -> ()
     @State private var translationEnabled: Bool = false
     @State private var configuration: TranslationSession.Configuration?
-    
-    init(model: ReviewModel) {
-        self.model = model
-        self.translatedReview = model.review
-    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -36,7 +30,7 @@ struct ReviewRow: View {
                     }
             }
             
-            Text(translatedReview)
+            Text(model.translationText ?? model.review)
                 .font(.system(size: 12, weight: .regular))
                 .lineSpacing(5)
         }
@@ -56,7 +50,7 @@ struct ReviewRow: View {
             self.translationEnabled = true
         }
         .translationTask(configuration) { session in
-            await self.translateReview(session)
+            self.action(session, model)
         }
     }
     
@@ -67,16 +61,4 @@ struct ReviewRow: View {
         }
         configuration?.invalidate()
     }
-    
-    private func translateReview(_ session: TranslationSession) async {
-        do {
-            let response = try await session.translate(model.review)
-            self.translatedReview = response.targetText
-        } catch { }
-    }
-}
-
-#Preview {
-    ReviewRow(model: .init(username: "offlineSeeker", review: "I love the app and its features, but it desperately needs an offline mode. Streaming is great, but sometimes I need to listen to music without using data. Hope this feature is added soon."))
-        .padding(.horizontal, 20)
 }
