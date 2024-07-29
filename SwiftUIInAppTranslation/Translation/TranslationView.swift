@@ -13,6 +13,8 @@ struct TranslationView: View {
     var body: some View {
         VStack {
             List {
+                ReviewTitleView()
+                
                 ForEach(viewModel.reviews) { model in
                     ReviewRow(model: model)
                 }

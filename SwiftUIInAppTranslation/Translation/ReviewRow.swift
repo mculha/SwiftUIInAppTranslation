@@ -62,7 +62,7 @@ struct ReviewRow: View {
     
     private func triggerTranslation() {
         if configuration == nil {
-            configuration = TranslationSession.Configuration()
+            configuration = TranslationSession.Configuration(target: .init(identifier: "de_DE"))
             return
         }
         configuration?.invalidate()

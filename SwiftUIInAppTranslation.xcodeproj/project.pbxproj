@@ -15,6 +15,7 @@
 		E9FA93F82C55160700E9F5BD /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA93F72C55160400E9F5BD /* ReviewModel.swift */; };
 		E9FA93FE2C5517A800E9F5BD /* reviews.json in Resources */ = {isa = PBXBuildFile; fileRef = E9FA93FD2C5517A800E9F5BD /* reviews.json */; };
 		E9FA94002C55273000E9F5BD /* ReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA93FF2C55272E00E9F5BD /* ReviewRow.swift */; };
+		E9FA94022C58262700E9F5BD /* ReviewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA94012C58262300E9F5BD /* ReviewTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E9FA93F72C55160400E9F5BD /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		E9FA93FD2C5517A800E9F5BD /* reviews.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reviews.json; sourceTree = "<group>"; };
 		E9FA93FF2C55272E00E9F5BD /* ReviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRow.swift; sourceTree = "<group>"; };
+		E9FA94012C58262300E9F5BD /* ReviewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		E9FA93F22C55126C00E9F5BD /* Translation */ = {
 			isa = PBXGroup;
 			children = (
+				E9FA94012C58262300E9F5BD /* ReviewTitleView.swift */,
 				E9FA93FF2C55272E00E9F5BD /* ReviewRow.swift */,
 				E9FA93F52C55128F00E9F5BD /* TranslationViewModel.swift */,
 				E9FA93F32C55127A00E9F5BD /* TranslationView.swift */,
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FA93F42C55127A00E9F5BD /* TranslationView.swift in Sources */,
+				E9FA94022C58262700E9F5BD /* ReviewTitleView.swift in Sources */,
 				E9FA93F82C55160700E9F5BD /* ReviewModel.swift in Sources */,
 				E9FA93E52C52E85F00E9F5BD /* SwiftUIInAppTranslationApp.swift in Sources */,
 				E9FA94002C55273000E9F5BD /* ReviewRow.swift in Sources */,
@@ -312,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIInAppTranslation/Preview Content\"";
+				DEVELOPMENT_TEAM = HU43CL53AU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -319,6 +324,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIInAppTranslation/Preview Content\"";
+				DEVELOPMENT_TEAM = HU43CL53AU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -347,6 +354,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
