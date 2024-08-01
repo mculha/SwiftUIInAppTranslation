@@ -9,7 +9,7 @@ TranslationSession also supports batch translation if it is needed.
 The video shows the three ways of translating texts, presenting the translation sheet, translating a particular text, and translating all of them.
 
 **NOTE:** Translation Framework does **NOT** work on simulators. Just use real devices for testing
-
+**NOTE:** Minimum Deployment should be iOS 18 or above to use Translation API.
 
 https://github.com/user-attachments/assets/991bd905-6eb8-4297-be9a-8876f754d503
 
